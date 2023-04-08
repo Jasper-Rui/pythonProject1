@@ -21,3 +21,19 @@ print(c == d)
 e = '''my name is 'Jasper' and my name is "Jasper"'''
 
 print(e)
+
+print(len(e))
+
+
+a1 = 'hello'
+a2 = 'world'
+
+print(a1 + ' ' + a2)
+
+b1 = 10
+b2 = 'test'
+b3 = 4
+
+print(b1 + b3)
+
+print(b1 + b2)
