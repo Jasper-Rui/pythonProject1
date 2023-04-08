@@ -36,4 +36,9 @@ b3 = 4
 
 print(b1 + b3)
 
-print(b1 + b2)
+
+
+c1 = True
+c2 = False
+
+print(type(c1))
