@@ -11,3 +11,7 @@ a = True
 print(type(a))
 
 # this is a comment
+
+"""
+this is comment
+"""
