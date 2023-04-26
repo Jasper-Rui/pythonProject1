@@ -61,3 +61,51 @@ else:
     print('女孩')
 
 
+# 设定角色出生点
+point = random.randint(1, 3)
+if home == 10:
+    # 第一档
+    print('你出生在帝都 你很牛逼')
+    home += 1
+    iq += 1
+    face += 1
+
+elif 9 >= home >= 7:
+    # 第二档
+    if point == 1:
+        print('你出生在二线城市 你还不错 父母是公务员')
+        face += 2
+    elif point == 2:
+        print('你出生在二线城市 你父母是高管 不错')
+        home += 2
+    else:
+        print('你出生在二线城市 你父母是大学教授 不错')
+        iq += 2
+
+elif 6 >= home >= 4:
+    # 第三档
+    if point == 1:
+        print('你出生在三线城市 你还不错 父母是医生')
+        strong += 1
+    elif point == 2:
+        print('你出生在三线城市 你父母是老湿 不错')
+        iq += 1
+    else:
+        print('你出生在三线城市 你父母是小饭馆的老板 不错')
+        home += 1
+else:
+    # 第四档
+    print('你太惨了')
+    if point == 1:
+        print('你出生在村子里 父母是农民')
+        strong += 1
+        face -= 2
+    elif point == 2:
+        print('你出生在村子里 你父母无业游民')
+        home -= 1
+    else:
+        print('你出生在村子里 但是父母感情不好')
+        strong -= 1
+
+
+print(f'颜值 {face} 体质 {strong} 智力 {iq} 家庭 {home}')5
