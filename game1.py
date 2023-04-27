@@ -125,3 +125,28 @@ for age in range(1, 11):
         print(info)
         print('游戏结束')
         sys.exit()
+
+    # 体质触发的事件
+    elif strong < 6 and point < 3:
+        info += '你生了一场病， '
+        if home >= 5:
+            info += '在父母的照料下 你恢复健康了， '
+            strong += 1
+            home -= 1
+        else:
+            info += '你的父母没精力管你， 你的身体更糟糕了， '
+            strong -= 1
+    # 颜值触发事件
+    elif face <= 4 and age >= 7:
+        info += '你长得太丑了， 其余的小朋友不喜欢你， '
+        if iq > 5:
+            info += '你决定用学习填充自己， '
+            iq += 1
+        else:
+            if gender == 'boy':
+                info += '你和其他小朋友经常打架， '
+                strong += 1
+                iq -= 1
+            else:
+                info += '你经常被欺负'
+                strong -= 1
