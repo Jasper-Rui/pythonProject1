@@ -1,6 +1,7 @@
 #
 import random
 import sys
+import time
 
 print('-----------------------------------------------------------------')
 print('|                                                                |')
@@ -150,3 +151,45 @@ for age in range(1, 11):
             else:
                 info += '你经常被欺负'
                 strong -= 1
+
+    # 通过智商触发的事件
+    elif iq < 5:
+        info += '你看起来傻傻的'
+        if home >= 8 and age >= 6:
+            info += '你的父母把你送到了更好的学校学习， '
+            iq += 1
+        elif 4 <= home <= 7 :
+            if gender == 'boy':
+                info += '你的父母鼓励你多运动， 争取成为运动员， '
+                strong += 1
+            else:
+                info += '你的父母鼓励你多打扮自己， '
+                face += 1
+        else:
+            info += '你的父母为此经常吵架， '
+            if point == 1:
+                strong -= 1
+            elif point == 2:
+                iq -= 1
+            else:
+                pass
+    # 健康成长
+    else:
+        info += '健康成长了！'
+        if point == 1:
+            info += '你看起来更结实了！ '
+            strong += 1
+        elif point == 2:
+            info += '你看起来更好看了！ '
+            face += 1
+        else:
+            # 无事发生
+            pass
+    print(info)
+    print(f'颜值 {face} 体质 {strong} 智力 {iq} 家庭 {home}')
+    print('-----------------------------------------------------------------')
+    time.sleep(1)
+
+
+
+
