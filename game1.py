@@ -1,5 +1,6 @@
 #
 import random
+import sys
 
 print('-----------------------------------------------------------------')
 print('|                                                                |')
@@ -108,4 +109,19 @@ else:
         strong -= 1
 
 
-print(f'颜值 {face} 体质 {strong} 智力 {iq} 家庭 {home}')5
+print(f'颜值 {face} 体质 {strong} 智力 {iq} 家庭 {home}')
+
+
+# 幼年阶段
+for age in range(1, 11):
+    # 把一整阶段的全部存储到一个字符串里面 最后一起打印
+    info = f'今年你{age}岁, '
+
+    point = random.randint(1,3)
+
+    # 现在根据随机数生成事件
+    if gender == 'gril' and home <= 3 and point == 1:
+        info += '你的家里人重男轻女非常严重， 你被遗弃了！'
+        print(info)
+        print('游戏结束')
+        sys.exit()
